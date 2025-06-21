@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <textarea id="area" placeholder="说点什么吧" maxlength="200">
+        </textarea>
+        <div>
+            <span class="sp">0</span>
+            <span>/</span>
+            <span>200</span>
+        </div>
+    </div>
+    <script>
+        //键盘事件（针对表单输入框）
+        //键盘输入：oninput
+        let area=document.querySelector("#area")
+        area.oninput=function(){
+            document.querySelector(".sp").innerText=area.value.length
+        }
+    </script>
+</body>
+</html>

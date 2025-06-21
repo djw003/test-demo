@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="a" type="button" value="点我啊，给你点颜色看看！">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+    <script>
+        let a=document.querySelector(".a")
+        let lilist=document.querySelectorAll("li")
+        a.onclick=function(){
+            for(let i=0;i<lilist.length;i++){
+                if(i%2==0){
+                    lilist[i].style.backgroundColor="pink"
+                }else{
+                    lilist[i].style.backgroundColor="red"
+                }
+            }
+        }
+        for(let i=0;i<lilist.length;i++){
+            lilist[i].onmouseenter=function(){
+                this.setAttribute("aaa",this.style.backgroundColor)
+                this.style.backgroundColor="blue"
+            }
+            lilist[i].onmouseleave=function(){
+                let bgc=this.getAttribute("aaa")
+                this.style.backgroundColor=bgc
+            }
+
+        }
+    </script>
+</body>
+</html>

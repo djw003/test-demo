@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="a" style="background-color: pink; width: 100px; height: 100px;">
+    </div>
+    <script>//鼠标事件
+        let diva=document.querySelector(".a")
+        diva.onclick=function(){
+            diva.style.backgroundColor="red"
+        }
+        //ondblclick双击
+        diva.onmouseenter=function(){
+            diva.style.backgroundColor="blue"
+        }
+        diva.onmouseleave=function(){
+            diva.style.backgroundColor="pink"
+        }
+    </script>
+</body>
+</html>

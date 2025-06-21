@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        .mb-3{
+            margin: 10px;
+           
+        }
+        li{
+            color: #807676;
+        }
+        .input-group-append{
+            margin-right: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script type="text/javascript" src="./js/jquery3.7.js"></script>
+</head>
+<body>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+        </div>
+      </div>
+    <ul class="list-group">
+    </ul>
+
+    <script>
+        let lilist=$("li")    
+        let length=lilist.length
+        let form_control=$(".form-control")
+        $("#button-addon2").click(function(){
+            if(length<=0){length=0}
+            length++
+            if ($(".form-control").val().trim() == "") {
+                //alert("输入内容不能为空")
+                $(".form-control").val("")
+                return
+        }
+            let mydate=new Date();
+            let li = $("<li></li>").html(`<button type="button"  class="btn btn-link">Delete</button> ${form_control.val()}\xa0\xa0\xa0\xa0\xa0${mydate.toLocaleString()}`)
+            li.addClass("list-group-item")
+            $("ul").append(li)
+            form_control.val("")
+            
+            lilist=$("li")
+            let links=$(".btn-link")
+            for(let i=0;i<lilist.length;i++){
+                $(links[i]).click(function(){  
+               $(lilist[i]).remove()
+        })
+            }
+        })
+        $(".form-control").keydown(function(e){
+            if(e.code=="Enter"){
+                $("#button-addon2").click();
+            }
+        })
+        
+    </script>
+</body>
+</html>

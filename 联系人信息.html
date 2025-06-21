@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          a{
+        text-decoration: none;
+        color: #000;
+    }
+    </style>
+</head>
+<body>
+    <script src="./js/axios.js"></script>
+    <script>
+                // axios({
+                //     url:'请求路径',
+                //     method:'请求方式',
+                //     data:{ post请求参数 },
+                //     params:{ get请求参数 }
+                // }).then(res=>{
+                //     //成功回调
+                //     //console.log(res)
+                // });
+        
+         axios({
+                    url:'http://127.0.0.1:8000/v1/insert1',
+                    method:'get',
+                }).then(res=>{
+                    //成功回调
+                    console.log(res)
+                    console.log(res.data)
+                    renderData(res.data)
+                })
+
+            const renderData = arr=>{
+                document.querySelector("body").innerHTML = `    
+                                    <h1>信息如下</h1>
+                                <p>你的手机号:${arr.number}</p>
+                                <p>你的姓名:${arr.name}</p>
+                                <p>你的姓别:${arr.sex}</p>
+                                <p>你的地址:${arr.address}</p>
+                                <p>你的年龄:${arr.age}</p>
+                                <button><a href="http://127.0.0.1:3000/全部联系人信息.html">查看全部联系人</a></button>
+                `
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ .ul{
+        list-style: none;
+    }
+    hr{
+        width: 95%;
+        margin-left: 0px;
+    }
+    .div2{
+        background-color: rgb(250, 250, 250);
+        width: 560px;
+        padding: 2px;
+        margin-left: 20px;
+    }
+    .span1{
+        display: inline-block;/*让不能修改宽高的span标签能设置宽高*/
+        width:130px;
+        height: 20px;
+        margin-right: 1px;
+    }
+    .span2{
+        display: inline-block;
+        width:90px;
+        height: 20px;
+        margin-right: 1px;
+    }
+</style>
+<body>
+    <div class="div1">
+        <h1>通讯录</h1>
+        <div class="div2">
+            <ul><span class="span1">手机号</span><span class="span2">姓名</span><span class="span2">性别</span><span class="span2">地址</span><span class="span2">年龄</span>
+                <hr> </ul>
+                <ul class="ul">
+                    </ul>
+        </div>
+    </div>
+    <script src="./js/axios.js"></script>
+    <script>
+        axios({
+                    url:'http://127.0.0.1:8000/v1/read',
+                    method:'get',
+                }).then(res=>{
+                    //成功回调
+                    console.log(res)
+                    console.log(res.data)
+                    renderData(res.data)
+                })
+                const renderData = arr=>{
+                document.querySelector(".ul").innerHTML = arr.map(item=>`    
+                <li><span class="span1">${item.number}</span><span class="span2">${item.name}</span><span class="span2">${item.sex}</span><span class="span2">${item.address}</span><span class="span2">${item.age}</span><li>        
+                    <hr> `).join(" ")
+            }
+    </script>
+</body>
+</html>

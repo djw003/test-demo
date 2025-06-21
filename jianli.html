@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            line-height: 1.6; 
+            max-width: 800px; 
+            margin: 20px auto; 
+            padding: 0 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 { 
+            border-bottom: 3px solid #2c3e50; 
+            padding-bottom: 10px;
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        h2 { 
+            color: #34495e;
+            margin-top: 20px; /* 减少模块间距 */
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+        }
+        p {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        ul { 
+            padding-left: 20px; 
+            margin-top: 5px;
+            list-style-type: none;
+        }
+        ul li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .photo { 
+            float: right; 
+            width: 150px;
+            height: 200px;
+            border: 3px solid #3498db;
+            border-radius: 5px;
+            margin: 0 0 15px 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px; /* 减少模块间距 */
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #bdc3c7;
+        }
+        .header-info {
+            flex: 1;
+        }
+        .contact-info {
+            margin-top: 15px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .section {
+            margin-bottom: 10px; /* 减少模块间距 */
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #bdc3c7;
+        }
+        .section-title {
+            margin-bottom: 10px;
+        }
+        .job-title, .education-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .skill {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        .self-evaluation {
+            background-color: #f8f9fa;
+            padding: 1px;
+            border-radius: 2px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-info">
+            <h1>董佳威</h1>
+            <div class="contact-info">
+                <p><strong>意向岗位：</strong></p>
+                <p><strong>出生年月：</strong>2003年2月25日</p>
+                <p><strong>政治面貌：</strong>共青团员</p>
+                <p><strong>联系电话：</strong>+86 17339623257</p>
+                <p><strong>邮箱：</strong>1514617716@qq.com</p>
+            </div>
+        </div>
+        <div class="photo">
+            <img src="jianli.jpg" width="150" height="200">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">教育背景</h2>
+        <div class="education-title">2021.09-2025.07 | 商丘工学院 | 数据科学与大数据技术 | 本科</div>
+        <p>班级成绩前20</p>
+        <p><strong>主修课程：</strong>数据挖掘技术与应用、操作系统、计算机网络、计算机组成原理、数据结构、数据可视化、大数据库技术、PHP动态网站开发、C程序设计、Web前端开发、面向对象编程与设计、数据库系统、Python程序设计、Hadoop大数据技术、Linux操作系统、数据采集与预处理、软件工程、人工智能、大数据分析与计算等</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">实践经历</h2>
+        <div class="job-title">2025年2月~3月 | 单位实习 | 惠州齐岸鸣岸教育投资有限公司，广东</div>
+        <ul>
+            <li>开发题目查重工具，使用Python实现对试卷题目的查重。主要逻辑为，先对题目进行分句，再进行分词，然后计算每个题干的重复率，筛选出重复率较高的题目。</li>
+        </ul>
+
+        <div class="job-title">2025年 | 本科毕业设计 | 商丘工学院</div>
+        <ul>
+            <li>设计基于深度学习的道路缺陷检测系统，主要采集大量道路相关的图片进行规格化清洗后，对其进行数据标注划分数据集，采用YOLOv8,YOLOv11,YOLOv12预处理模型进行每轮8批次总计150轮的模型训练，利用Python对训练性能指标进行数据可视化，保证map50-95以及精确率都趋于平衡不会过拟合，最后使用Python中的PyQt5进行UI设计。该系统支持图片检测、视频检测以及实时检测的功能，能够将检测缺陷位置画面标注并显示出来同时保存文件中。</li>
+        </ul>
+
+        <div class="job-title">2022年7月~9月 | 志愿者社会实践 | 河南省驻马店市</div>
+        <ul>
+            <li>录用为镇团支部兼职副书记，配合监控镇上医院人流口罩佩戴情况，商店的行程码落实工作，认真务实纪律性强。</li>
+        </ul>
+
+        <div class="job-title">2021年12月~1月 | 疫情防控志愿者 | 河南省驻马店市</div>
+        <ul>
+            <li>根据村领导安排村集体挨家挨户进行房屋调查，排查有无自然灾害，房屋种类面积以及数量，3天排查完整个村庄，工作效率高沟通能力强。</li>
+            <li>同时安排进行车辆防控，对来往车辆记录号码车牌信息。</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">校园经历</h2>
+        <div class="job-title">校级组织校卫队宣传分队成员</div>
+        <ul>
+            <li>实行半军事化管理，每天体能训练、打格斗术、服从学校保卫处的安排，有严格的纪律性</li>
+            <li>参加每年度的消防月演练、安全月的防爆演戏、定期排查校园灭火器的气压表</li>
+            <li>为每个寝室进行消防演习，具有强大的执行力</li>
+            <li>参加格斗术表演并获奖，有极强团体荣誉感</li>
+            <li>每周进行例会总结撰写新闻稿拍摄照片，具有总结和摄影能力</li>
+            <li>搜查违禁品和寝室安全隐患，办事严格有效率</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">技能及其他</h2>
+        <div class="skills-list">
+            <div class="skill"><strong>语言技能：</strong>普通话二乙</div>
+            <div class="skill"><strong>计算机技能：</strong>熟练掌握Word,WPS，Excel表格等办公软件，熟练使用ai，pyhton，HTML/CSS/JavaScript，MySQL数据库等</div>
+            <div class="skill"><strong>其他技能：</strong>C1驾照</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">自我评价</h2>
+        <div class="self-evaluation">
+            <ul>
+                <li>我具有良好的创新精神</li>
+                <li>我具有踏实能干得奋斗精神</li>
+                <li>我具有爱国情怀</li>
+                <li>具有吃苦耐劳的品格，任劳任怨</li>
+                <li>有艺术涵养，有摄影调色等基础，思维灵活</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

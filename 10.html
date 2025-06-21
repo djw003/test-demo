@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .col-sm-4{
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        margin-left: -110px;
+      }
+        /*使用绝对定位进行元素定位时,
+        使用left:50%将元素进行水平居中 但会出现偏左的问题 
+        原因:绝对定位的元素left设为50%时,是以左上角为原点的。 
+        解决方案:只要再使用margin-left属性添加负值补偿回来即可。 
+        比如: div.panel { position: absolute; top: 180px; left: 50%; margin-left: -150px; 
+        /*差不多为该div宽度的一半 background-image:  height: 351px; width: 305px;*/
+     
+     .input-group-text{
+      margin: 5px;
+     }
+     .mb-3{
+      margin-top: 5px;
+     }
+     .btn-dark{
+      margin-left: 50px;
+      width:170px;
+      background-color: rgb(183, 217, 217);
+      border: 1px;
+      border-radius: 10px;
+      cursor: pointer;/*鼠标悬停小手 default默认光标*/
+     }
+     h3{
+      margin-left: 30px;
+     }
+     input{
+      border: 2px solid rgb(198, 187, 187);
+      outline: none;
+      border-radius: 5px;
+     }
+    </style>
+</head>
+
+<body>
+     <div class="col-sm-4">
+          <!-- 添加 -->
+          <div class="card text-white bg-secondary sticky-top">
+            <h3>登录界面</h3>
+            <form class="card-body bg-light" id="addForm" action="">
+              <!-- 账号 -->
+              <div class="input-group mb-3">
+                  <span class="input-group-text">账号:</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="请输入账号"
+                  name="userName"
+                />
+              </div>
+              <!-- 密码 -->
+              <div class="input-group mb-3">
+                  <span class="input-group-text">密码:</span>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="请输入账号密码"
+                  name="password"
+                />
+              </div>
+             <br>
+              <!-- 添加按钮 -->
+              <button class="btn btn-dark" type="submit">登录</button>
+              <!-- <button class="btn btn-dark2" type="submit">注册</button> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/axios.js"></script>
+    <script>
+      let inputList=document.querySelectorAll("form input")
+      document.querySelector(".btn-dark").onmouseenter=function(){
+            this.style.backgroundColor="#358068"
+        }
+        document.querySelector(".btn-dark").onmouseleave=function(){
+            this.style.backgroundColor=" rgb(183, 217, 217)"
+        }
+            const getFormData=()=>{
+              let obj={}
+              inputList.forEach(item=>{
+                obj[item.name]=item.value
+              })
+              console.log(obj)
+              return obj
+            }
+                // axios({
+                //     url:'http://test.manager.qiqishangan.com:16002/swagger/index.html',
+                //     method:'post',
+                //     // data:{ post请求参数 }
+                // }).then(res=>{
+                //     //成功回调
+                //     //console.log(res)
+                // });
+                document.querySelector(".btn-dark").onclick=function(e){
+                  e.preventDefault()
+                  let data=getFormData()
+                  // console.log(data)
+                  //非空判断
+                  if(data.userName==''||data.password==''){
+                    return alert('不能为空')
+                  }
+                axios({
+                    url:'http://test.manager.qiqishangan.com:16002/v2/A000',
+                    method:'post',
+                     data:data
+                }).then(res=>{
+                    //成功回调
+                    console.log(res)
+                   if(res.data.dt){
+                    location.href='http://www.baidu.com'
+                   }else{alert("账号或密码错误！")}
+
+                });
+                  for(i=0;i<inputList.length;i++){
+                    inputList[i].value=''
+                  }
+                }
+                for(i=0;i<inputList.length;i++){
+                    inputList[i].onfocus=function(){
+                      this.style.border="2px solid  rgb(183, 217, 217)"
+                    }
+                    inputList[i].onblur=function(){
+                      this.style.border=" 2px solid rgb(198, 187, 187)"
+                    }
+                  }
+    </script> 
+</body>
+</html>

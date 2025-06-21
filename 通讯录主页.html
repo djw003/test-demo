@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    h1 {
+        background-image: radial-gradient(#000000, #FFEDBC);       
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: ani 3s infinite ease-in-out;
+        background-position: 200px 200px;
+    }
+
+    @keyframes ani {
+      0% {
+        background-position: 250px 200px;
+      }
+
+      100% {
+        background-position: 450px 400px;
+
+      }
+    }
+        div{
+            position: absolute;
+            text-align: center;
+            width: 250px;
+            height: 500px;
+            background-color: rgb(250, 250, 250);
+            left: 50%;
+            margin-left: -125px;
+        }
+        a{
+        text-decoration: none;
+        color: #000;
+    }
+        button{
+            width: 200px;
+            margin: 10px;
+ 
+        }
+    </style>
+</head>
+<body>
+   <div> <h1>通讯录管理系统</h1>
+    <button><a href="http://127.0.0.1:3000/添加功能.html"><h4>增加联系人</h4></a></button><br>
+    <button><a href="http://127.0.0.1:3000/删除功能.html"><h4>删除联系人</h4></a></button><br>
+    <button><a href="http://127.0.0.1:3000/查找联系人功能.html"><h4>查找联系人</h4></a></button><br>
+    <button><a href="http://127.0.0.1:3000/修改联系人功能.html"><h4>修改联系人</h4></a></button><br>
+    <button><a href="http://127.0.0.1:3000/全部联系人信息.html"><h4>查看联系人</h4></a></button><br></div>
+    <script src="./js/axios.js"></script>
+</body>
+</html>

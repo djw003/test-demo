@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        .aaa{
+            color: #ef4949;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li class="aaa">6</li>
+    </ul>
+    <button class="button1">删除</button>
+    <button class="button2">新增</button>
+    <script>
+        let lilist=document.querySelectorAll("li")
+        let ul=document.querySelector("ul")
+        let lia=document.querySelector(".aaa")
+        let length=lilist.length
+        document.querySelector(".button1").onclick=function(){
+            let lilist=document.querySelectorAll("li")
+            length--
+            ul.removeChild(lilist[length])
+            lilist[length-1].classList.add("aaa")
+        }
+        document.querySelector(".button2").onclick=function(){
+            if(length<=0){length=0}
+            let li = document.createElement("li")
+            length++
+            li.innerHTML=`${length}`
+            ul.appendChild(li)
+            let lilist=document.querySelectorAll("li")
+            lilist[length-2].classList.remove("aaa")
+            lilist[length-1].classList.add("aaa")
+        }
+    </script>
+</body>
+</html>
