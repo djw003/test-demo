@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 使用 CDN 加载 Vue -->
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <!-- 挂载点，实例，模版 -->
+    <div id="app"><h1>{{number}} {{ message }}</h1>
+        <h1 v-html="number"></h1>
+        <div v-html="content"></div>
+        <div @click="handClick"><h1>{{text}}</h1></div><!--v-on: = @-->
+        <div title={{title}}><h2>hello world</h2></div>
+    </div><!--{{}}插值表达式-->
+    
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                message: "world",
+                number:"hello",
+                content:"<h1>hello 123</h1>",
+                text:"点击",
+                title:"this is hello world"
+            },
+            methods: {
+                handClick:function(){
+                    this.text="world"
+                }
+            }
+        });
+    </script>
+</body>
+</html>
