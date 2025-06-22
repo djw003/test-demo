@@ -7,6 +7,32 @@
     <script src="./js/vue.js"></script>
 </head>
 <body>
-    
+    <div id="root">
+        <div>
+            <input v-model="inputValue">
+            <button @click="button">提交</button>
+        </div>
+        <ul>
+            <li v-for="(item,index) of list" :key="index" @click="listdelete">{{item}}</li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:"#root",
+            data:{
+                inputValue:" ",
+                list:[]
+            },
+            methods:{
+                button:function(){
+                    this.list.push(this.inputValue)
+                    this.inputValue=' '
+                },
+                listdelete:function(key){
+                    this.list.splice(key,1)
+                }
+            }
+        })
+    </script>
 </body>
 </html>
