@@ -12,8 +12,14 @@
     <div id="app"><h1>{{number}} {{ message }}</h1>
         <h1 v-html="number"></h1>
         <div v-html="content"></div>
-        <div @click="handClick"><h1>{{text}}</h1></div><!--v-on: = @-->
-        <div title={{title}}><h2>hello world</h2></div>
+        <div @click="handClick"><h1>{{text}}</h1></div><!--v-on: = @ -->
+        <div v-bind:title="title"><h2>hello world</h2></div><!-- v-bind =:  属性绑定将title标签和title属性绑定-->
+        <input v-model="content2"/><!-- v-model双向绑定 -->
+        <div><h2>{{content2}}</h2></div>
+        姓：<input v-model="firstname"> 
+        名：<input v-model="lastname">
+        <div>姓名为：{{fullname}}</div>
+        <div>{{count}}</div>
     </div><!--{{}}插值表达式-->
     
     <script>
@@ -24,13 +30,27 @@
                 number:"hello",
                 content:"<h1>hello 123</h1>",
                 text:"点击",
-                title:"this is hello world"
+                title:"this is hello world",
+                content2:"this is contet2",
+                firstname:"",
+                lastname:"",
+                count:0
             },
             methods: {
                 handClick:function(){
                     this.text="world"
                 }
-            }
+            },
+            computed:{//计算属性
+                fullname:function(){
+                    return this.firstname+' '+this.lastname
+                }
+            },
+            watch:{//侦听器
+                fullname:function(){
+                    this.count++
+                }
+            } 
         });
     </script>
 </body>

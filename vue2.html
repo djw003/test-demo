@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>v-if,v-show,v-for指令</title>
     <script src="./js/vue.js"></script>
 </head>
 <body>
-    
+    <div id="root">
+        <div v-if="show"><h1>hello world</h1></div><!--用v-if和v-show都可以实现显示和消失，只不过v-if是将整个div结构暂时删除，v-show则是将style中的display设置为none-->
+        <button @click="button">toggle</button><!--频繁点击用v-show，不频繁用v-if-->
+        <ul>
+            <li v-for="(item,index) of list" :key="index">{{item}}</li><!--设置key可以提升渲染效率，可以将其设置为内容，保证个循环的key值不同-->
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:"#root",
+            data:{
+                show:true,
+                list:[1,2,3]
+            },
+            methods:{
+                button:function(){
+                    this.show=!this.show;
+                }
+            }
+        })
+    </script>
 </body>
 </html>
