@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贩卖机</title>
+    <script src="js/vue.js"></script>
+    <style>
+        #box{
+            border: 2px solid #000;
+            border-color: #000;
+            width: 300px;
+            height: 130px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="box">
+        <h3>贩卖机</h3>
+        <button @click="buy(5)">可乐5元</button>
+        <button @click="buy(6)">雪碧6元</button>
+        <button @click="buy(10)">咖啡10元</button>
+        </div>
+        <div>银行卡账户余额：{{balance}}</div>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el:"#app",
+            data:{
+                balance:100
+            },
+            methods:{
+                buy:function(p){
+                    if(this.balance>=p){
+                        console.log(p);
+                        this.balance-=p;
+                    }else{
+                        alert("余额不足");
+                    }
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>
