@@ -9,7 +9,7 @@
 <body>
     <div id="root">
         <div>
-            <input v-model="inputValue">
+            <input v-model="inputValue" @keyup.enter="button">
             <button @click="button">提交</button>
         </div>
         <ul>
@@ -20,13 +20,15 @@
         new Vue({
             el:"#root",
             data:{
-                inputValue:" ",
+                inputValue:"",
                 list:[]
             },
             methods:{
                 button:function(){
-                    this.list.push(this.inputValue)
-                    this.inputValue=' '
+                    if(this.inputValue.trim()!=""){
+                        this.list.unshift(this.inputValue)//添加到列表末尾用push，添加到列表开头用unshift
+                        this.inputValue=' '
+                    }else{  alert("不能为空")}
                 },
                 listdelete:function(key){
                     this.list.splice(key,1)
