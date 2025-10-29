@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <title>点名系统</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 20px;
+    }
+
+    h1 {
+      padding: 10px;
+      background-color: #9acd32;
+      color: purple;
+      margin: 10px 0;
+    }
+
+    button {
+      width: 100px;
+      height: 50px;
+      border-radius: 25px;
+      background-color: #9acd32;
+      color: #fff;
+      border: none;
+      font-size: 20px;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    li {
+      width: 100px;
+      height: 40px;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+    }
+
+    /* 在随机抽取的过程中被选中的 */
+    .active {
+      background-color: #9acd32;
+      color: #fff;
+    }
+
+    /* 确定下来了 最终被选中 */
+    .select {
+      background-color: palevioletred;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>被选中的小伙伴们:</h1>
+  <button>开始</button>
+  <ul></ul>
+  <script>
+    const ul = document.querySelector('ul');
+    const h1 = document.querySelector('h1');
+    const button = document.querySelector('button');
+
+
+    const str = `胡淑华 黄锦伦 王丹雅 周立团
+王美妍
+张瑞羽
+刘建科 
+王丽辉 
+朱飞宇
+刘家友
+周志兴
+徐超军
+蔡法宗
+宁博
+夏万园
+董佳威
+包春来 
+刘智强
+阳亚明 
+邓智恒
+冯毅
+李志浩
+吴昭杰 
+刑福伟
+刘洋
+韩镒灿
+秦芳
+张淑仪
+夏宇
+张涵
+张毅韩
+闫子康
+农志旺
+刘琳娜
+周贤洋
+刘勇
+林生辉`.trim();
+    const sList = JSON.parse(localStorage.getItem('classmate111')) || [];
+
+    const arr = str.replace(/\s+/g, ' ').split(' ');
+    init();
+    button.addEventListener('click', function (e) {
+      button.disabled = true;
+      const timeId = setInterval(function () {
+        const oldNode = document.querySelector('li.active');
+        oldNode && oldNode.classList.remove('active');
+        const lis = document.querySelectorAll('li:not(.select)');
+        const index = getRandom(0, lis.length - 1);
+        lis[index].classList.add('active');
+      }, 100);
+      setTimeout(function () {
+        clearInterval(timeId);
+        const seleteOne = document.querySelector('li.active');
+        seleteOne.classList.add('select');
+        sList.push(seleteOne.innerText);
+        localStorage.setItem('classmate111', JSON.stringify(sList));
+        seleteOne.classList.remove('active');
+        h1.innerHTML += ' ' + seleteOne.innerText;
+        say(seleteOne.innerText);
+        button.disabled = false;
+        // document.querySelectorAll('li:not(.select)').length&&button.click();
+      }, 1000);
+    });
+    ul.addEventListener('dblclick', function (e) {
+      if (e.target.nodeName === 'LI') {
+        e.target.classList.toggle('select');
+        if (!e.target.classList.contains('select')) {
+          const ind = sList.indexOf(e.target.innerText);
+          sList.splice(ind, 1);
+          localStorage.setItem('classmate111', JSON.stringify(sList));
+          window.location.reload()
+        }
+      }
+    });
+    function init() {
+      let liHTML = '';
+      for (let index = 0; index < arr.length; index++) {
+        console.log(sList.includes(arr[index]));
+
+        liHTML += `<li class="${sList.includes(arr[index]) ? 'select' : ''
+          }">${arr[index]}</li>`;
+      }
+      ul.innerHTML = liHTML;
+      h1.innerHTML += sList.join(' ');
+    }
+    function getRandom(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    function say(str) {
+      var msg = new SpeechSynthesisUtterance(str);
+      msg.rate = 0.5;
+      msg.lang = 'zh-CN';
+      // msg.lang='en-US';
+      speechSynthesis.speak(msg);
+    }
+  </script>
+</body>
+
+</html>

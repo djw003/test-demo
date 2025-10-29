@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <style>
-        body { 
-            font-family: 'Arial', sans-serif; 
-            line-height: 1.6; 
-            max-width: 800px; 
-            margin: 20px auto; 
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
             padding: 0 20px;
             background-color: #f9f9f9;
             color: #333;
         }
-        h1 { 
-            border-bottom: 3px solid #2c3e50; 
+
+        h1 {
+            border-bottom: 3px solid #2c3e50;
             padding-bottom: 10px;
             color: #2c3e50;
             font-size: 28px;
             margin-bottom: 15px;
         }
-        h2 { 
+
+        h2 {
             color: #34495e;
-            margin-top: 20px; /* 减少模块间距 */
+            margin-top: 20px;
+            /* 减少模块间距 */
             padding-bottom: 8px;
             border-bottom: 2px solid #3498db;
             display: inline-block;
         }
+
         p {
             margin: 8px 0;
             line-height: 1.6;
         }
-        ul { 
-            padding-left: 20px; 
+
+        ul {
+            padding-left: 20px;
             margin-top: 5px;
             list-style-type: none;
         }
+
         ul li {
             margin-bottom: 8px;
             padding-left: 20px;
             position: relative;
         }
+
         ul li:before {
             content: "•";
             position: absolute;
@@ -46,48 +54,61 @@
             color: #3498db;
             font-weight: bold;
         }
-        .photo { 
-            float: right; 
+
+        .photo {
+            float: right;
             width: 150px;
             height: 200px;
             border: 3px solid #3498db;
             border-radius: 5px;
             margin: 0 0 15px 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 10px; /* 减少模块间距 */
+            margin-bottom: 10px;
+            /* 减少模块间距 */
             padding-bottom: 15px;
             border-bottom: 2px dashed #bdc3c7;
         }
+
         .header-info {
             flex: 1;
         }
+
         .contact-info {
             margin-top: 15px;
         }
+
         .contact-info p {
             margin: 5px 0;
         }
+
         .section {
-            margin-bottom: 10px; /* 减少模块间距 */
+            margin-bottom: 10px;
+            /* 减少模块间距 */
             padding-bottom: 15px;
             border-bottom: 1px dashed #bdc3c7;
         }
+
         .section-title {
             margin-bottom: 10px;
         }
-        .job-title, .education-title {
+
+        .job-title,
+        .education-title {
             font-weight: bold;
             margin-bottom: 5px;
         }
+
         .skills-list {
             display: flex;
             flex-wrap: wrap;
         }
+
         .skill {
             background-color: #ecf0f1;
             color: #2c3e50;
@@ -96,6 +117,7 @@
             border-radius: 3px;
             font-size: 14px;
         }
+
         .self-evaluation {
             background-color: #f8f9fa;
             padding: 1px;
@@ -104,17 +126,18 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="header">
         <div class="header-info">
             <h1>董佳威</h1>
             <div class="contact-info">
-                <p><strong>意向岗位：</strong></p>
-                <p><strong>出生年月：</strong>2003年2月25日</p>
-                <p><strong>政治面貌：</strong>共青团员</p>
-                <p><strong>联系电话：</strong>+86 17339623257</p>
-                <p><strong>邮箱：</strong>1514617716@qq.com</p>
+                <p><strong>意向岗位：</strong>鸿蒙开发工程师</p>
+                <p><strong>工作经验：</strong>3年</p>
+                <p><strong>期望城市：</strong>全国</p>
+                <p><strong>期望薪资：</strong>面议</p>
+                <p><strong>邮箱：</strong>dong123kane@gmail.com</p>
             </div>
         </div>
         <div class="photo">
@@ -124,55 +147,200 @@
 
     <div class="section">
         <h2 class="section-title">教育背景</h2>
-        <div class="education-title">2021.09-2025.07 | 商丘工学院 | 数据科学与大数据技术 | 本科</div>
-        <p>班级成绩前20</p>
-        <p><strong>主修课程：</strong>数据挖掘技术与应用、操作系统、计算机网络、计算机组成原理、数据结构、数据可视化、大数据库技术、PHP动态网站开发、C程序设计、Web前端开发、面向对象编程与设计、数据库系统、Python程序设计、Hadoop大数据技术、Linux操作系统、数据采集与预处理、软件工程、人工智能、大数据分析与计算等</p>
+        <div class="education-title">2018.09-2022.07 | 商丘工学院 | 数据科学与大数据技术 | 本科</div>
     </div>
 
     <div class="section">
-        <h2 class="section-title">实践经历</h2>
-        <div class="job-title">2025年2月~3月 | 单位实习 | 惠州齐岸鸣岸教育投资有限公司，广东</div>
-        <ul>
-            <li>开发题目查重工具，使用Python实现对试卷题目的查重。主要逻辑为，先对题目进行分句，再进行分词，然后计算每个题干的重复率，筛选出重复率较高的题目。</li>
-        </ul>
-
-        <div class="job-title">2025年 | 本科毕业设计 | 商丘工学院</div>
-        <ul>
-            <li>设计基于深度学习的道路缺陷检测系统，主要采集大量道路相关的图片进行规格化清洗后，对其进行数据标注划分数据集，采用YOLOv8,YOLOv11,YOLOv12预处理模型进行每轮8批次总计150轮的模型训练，利用Python对训练性能指标进行数据可视化，保证map50-95以及精确率都趋于平衡不会过拟合，最后使用Python中的PyQt5进行UI设计。该系统支持图片检测、视频检测以及实时检测的功能，能够将检测缺陷位置画面标注并显示出来同时保存文件中。</li>
-        </ul>
-
-        <div class="job-title">2022年7月~9月 | 志愿者社会实践 | 河南省驻马店市</div>
-        <ul>
-            <li>录用为镇团支部兼职副书记，配合监控镇上医院人流口罩佩戴情况，商店的行程码落实工作，认真务实纪律性强。</li>
-        </ul>
-
-        <div class="job-title">2021年12月~1月 | 疫情防控志愿者 | 河南省驻马店市</div>
-        <ul>
-            <li>根据村领导安排村集体挨家挨户进行房屋调查，排查有无自然灾害，房屋种类面积以及数量，3天排查完整个村庄，工作效率高沟通能力强。</li>
-            <li>同时安排进行车辆防控，对来往车辆记录号码车牌信息。</li>
-        </ul>
+        <h2 class="section-title">工作经历</h2>
+        <div class="job-title">2022年9月~2025年10月 | 工作单位 | 惠州城市大脑科技有限公司 | 安卓、HarmonyOS开发工程师 </div>
     </div>
 
     <div class="section">
-        <h2 class="section-title">校园经历</h2>
-        <div class="job-title">校级组织校卫队宣传分队成员</div>
-        <ul>
-            <li>实行半军事化管理，每天体能训练、打格斗术、服从学校保卫处的安排，有严格的纪律性</li>
-            <li>参加每年度的消防月演练、安全月的防爆演戏、定期排查校园灭火器的气压表</li>
-            <li>为每个寝室进行消防演习，具有强大的执行力</li>
-            <li>参加格斗术表演并获奖，有极强团体荣誉感</li>
-            <li>每周进行例会总结撰写新闻稿拍摄照片，具有总结和摄影能力</li>
-            <li>搜查违禁品和寝室安全隐患，办事严格有效率</li>
-        </ul>
+        <h2 class="section-title">专业技能</h2>
+        <div class="job-title">鸿蒙技能：</div>
+        <ol>
+            <li>能够使用Arkts和ArkUI还原要求的页面。</li>
+            <li>熟练掌握V1状态管理State，Link，Prop，AppStorage，Builder以及V2状态管理Param，Local,Once,Event等状态管理修饰符。</li>
+            <li>熟练掌握像Axios，Permission，关系型数据库，沉浸式这些常用功能和组件的封装。</li>
+            <li>熟练查询官方文档，能够通过查询官方文档来调用api实现对录音，文本转语音，扫码，华为登录，分享等复杂业务的实现。</li>
+            <li>熟悉组件和页面以及UIability的生命周期，能够处理不同生命周期要做的业务逻辑。</li>
+            <li>熟悉鸿蒙的一多开发不同应用之间的适配处理,熟练使用断点和栅格布局来完成不同设备的适配。</li>
+            <li>熟练三层架构公共能力层、基础特性层、产品定制层搭建项目，以及hap包、har静态共享包、hsp动态共享包的搭建。</li>
+            <li>熟悉通过鸿蒙内置的组件模版灵活实现业务需求，比如实现地图，位置，麦克风，日历等需求。</li>
+            <li>熟悉使用router、Navigation、以及第三方封装HMRouter路由管理，来实现路由栈和路由跳转，能够高效完成不同页面数据互通的实现。</li>
+            <li>能熟练运用Watch 以及 Monitor 实现监听数据变化，使用Computed监听需要计算的属性。</li>
+            <li>熟悉掌握LazyForEach、repeat实现懒加载，以及使用相对组件RelativeContainer实现扁平化处理，来完成对性能的优化。</li>
+            <li>熟悉数据可持久化，如PersistentStorage和Preference用户首选项以及关系型数据库的使用。</li>
+        </ol>
+        <div class="job-title">安卓技能：</div>
+        <ol>
+            <li>熟练使用线性布局LinearLayout、约束布局ConstraintLayout、帧布局FrameLayout、相对布局RelativeLayout等布局来实现页面布局。</li>
+            <li>熟练使用TextView、imageView、listView、ScrollView等常见组件来实现页面还原。</li>
+            <li>熟练掌握RecyclerView高性能滚动组件，会通过复用视图（ViewHolder）减少内存使用，提高滚动流畅度，通过 LayoutManager 轻松实现列表、网格、瀑布流等布局。</li>
+            <li>熟练用 Intent 实现 Activty 带参跳转及数据回传。</li>
+            <li>熟悉 Activity和 Fragment 的生命周期，能够进行相应业务的处理。</li>
+            <li>熟练使用协程处理异步事件并进行异常监听处理。</li>
+            <li>通 Retrofit+OkHttp实现网络调用，配置拦截器及数据解析。</li>
+            <li>熟悉通过SharedPreferences 和 单例模式来实现数据的持久化存储。</li>
+            <li>熟悉利用 ConstraintLayout 构建响应式布局，适配不同屏幕尺寸。</li>
+            <li>熟悉对于Toast 三方库的二次封装，用于项目中各个地方的轻提示。</li>
+        </ol>
     </div>
 
     <div class="section">
-        <h2 class="section-title">技能及其他</h2>
-        <div class="skills-list">
-            <div class="skill"><strong>语言技能：</strong>普通话二乙</div>
-            <div class="skill"><strong>计算机技能：</strong>熟练掌握Word,WPS，Excel表格等办公软件，熟练使用ai，pyhton，HTML/CSS/JavaScript，MySQL数据库等</div>
-            <div class="skill"><strong>其他技能：</strong>C1驾照</div>
+        <h2 class="section-title">项目经验</h2>
+
+        <div class="job-title" style="font-size: 20px;">2025年4月~10月 | 鸿蒙系统应用开发项目 | 悦购家居</div>
+        <div style="margin-top: 5px;"><b>技术栈：</b>Arkts、ArkUI、Rcp 远场通信、HarmonyOsLog、V2状态管理、一多适配、华为登录、服务卡片</div>
+        <div style="margin-top: 5px;">
+            <b>项目描述：</b>悦购家居是一款解决用户日常家具购物需求的项目，提供像客厅用品、厨房用品、厕所用品等购物需求，它主要依托于鸿蒙的一多开发特性实现在不同设备之间的自适应布局，同时使用三层工程架构构建项目，使得项目清晰、高效、可扩展。
         </div>
+        <div style="margin-top: 5px;">
+            <b>负责模块：</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;负责首页轮播图、商品列表、瀑布列表UI的渲染和多设备的适配，下拉刷新上拉加载功能的实现，以及文字搜索和语音搜索功能。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;负责我的页面华为账号一键登录的功能，以及地图功能查看足迹，购物车展示心意商品等功能。
+        </div>
+        <div class="job-title">项目技术要点：</div>
+        <ol>
+            <li>基于三层架构来搭建项目，分为commons公共能力层、features基础特性层、products产品定制层。</li>
+            <li>使用第三方库HarmonyOsLog日志打印工具，对他进行初始化并导出。他可以实现对hiLog和console两种工具的打印，支持各种类型包含JSON格式化打印，非常方便。</li>
+            <li>使用V2状态管理下的Repeat来完成列表的懒加载，它拥有和 LazyForEach一样的效果，但是使用起来更加方便不需要创建类实现IDataSource接口，因此更加方便。</li>
+            <li>使用WaterFlow容器实现于高度不固定的多列瀑布流布局，它可以像Grid网格容器一样实现在不同设备下设置columnsTemplate根据断点展示不同的商品列数，它主要是让商品的空间分布更加自然。
+            </li>
+            <li>基于media模块中 soundPool API实现下拉刷新时短音频播放效果，它相比较于AVPlay更加节省内存。</li>
+            <li>封装原生RCP获取网络数据，创建请求对象、设置基地址、设置请求和响应拦截器、设置网络请求方法。</li>
+            <li>基于speechRecognizer模块实现语音转文字搜索功能，通过创建引擎、设置回调监听、配置音频格式，调用start开始录音。</li>
+            <li>使用HMRouter第三方库，安装依赖、配置编译插件、在EntryAbility中初始化路由框架，同时定义路由入口HMNavigation，配置主页面地址和id，后续创建子页面只需配置@HMRouter的地址就行，实现路由跳转。
+            </li>
+            <li>在EntryAbility里获取当前窗口的上下文对象，得到窗口的宽度，创建函数判断属于哪一个断点（如sm,md），将断点信息保存下来，后续WaterFlow组件根据不同的断点来展示不同的列数。</li>
+            <li>通过生成项目的私钥和证书，在华为agc平台生成Profile文件，随后在项目中调用华为登录API拉起登录页面，成功登录后获取账号的code码，后端将code码发送给华为服务器，接受服务器成功返回的用户信息并保存下来，从而实现华为登录。
+            </li>
+            <!-- <li>在生命周期中获取UI上下文对象并调用setKeyboardAvoidMode来设置键盘避让。</li> -->
+            <li>使用Web组件通过src发起支付宝接口请求（携带订单id参数），成功支付后通过onPageBegin事件监听Web组件的网络请求变化，根据事件的回调结果判断当前的网页是否包含/pay/redirect，包含就跳转回项目的结果页面。
+            </li>
+            <!-- <li>sku是指商品的最小库存管理单位，使用第三方的sku自定义组件并导出，使用时传入商品的规格。</li> -->
+            <li>查询官方文档@kit.MapKit，在aboutToAppear中初始化地图参数和初始化的回调函数，在生命周期中调用。同时通过setMyLocationEnabled API显示我的位置。</li>
+            <li>在项目的phone产品层创建服务卡片，配置它的显示UI，点击卡片通过postCardAction触发router事件并携带参数，通过在EntryAbility
+                的onCreate生命周期接受传入的跳转页面参数，将该页面设置为登录页面从而实现点击卡片跳转到页面。</li>
+        </ol><br>
+        <div class="job-title" style="font-size: 20px;">2024年10月~2025年3月 | 鸿蒙系统应用开发项目 | 英题库</div>
+        <div style="margin-top: 5px;"><b>技术栈：</b>Arkts、ArkUI、Axios、SaveButton、photoAccessHelper、media模块</div>
+        <div style="margin-top: 5px;">
+            <b>项目描述：</b>英题库是一款专为学习英语的题库，里面包含四六级各个年份的真题以及常见单词，同时用户可以根据不同的题型分类，进行针对性复习。
+        </div>
+        <div style="margin-top: 5px;">
+            <b>负责模块：</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;负责首页核心功能的开发，具体包括扫码功能、生成二维码工具以及试题列表模块的条件筛选和排序，支持试题页面实现点击分享；实现每日打卡功能，包含日历组件、累计打卡、连续打卡；<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“我的页面”核心功能开发，其中包括登录用户账号、常考单词的语音朗读、各个题型学习模块累计学时的渲染、录音播放模块的实现、以及实现清除缓存和实现深色模式的切换。
+        </div>
+        <div class="job-title">项目技术要点：</div>
+        <ol>
+            <li>封装 Axios 网络请求工具类，配置基地址、请求拦截和响应拦截，以及常用的网络请求方法。</li>
+            <li>通过setWindowLayoutFullScreen来开启沉浸式并搭配getWindowAvoidArea获取导航栏的高度转成VP后持久化下来，实现应用的沉浸式配置。</li>
+            <li>采用 LazyForEach 代替传统的ForEach实现长列表按需加载与渲染优化，仅对可视区域内的列表项进行渲染处理，减轻因为一次性创建大量组件而消耗的性能，显著提升页面滚动时的流畅度。</li>
+            <li>基于media模块中的createAVRecorder API，通过创建录音对象，配置录音的声道、比特率、封装格式等参数，实现录音功能；同时使用相同模块下的createAVPlayer
+                API，根据录音存入的沙箱地址，完成播放。</li>
+            <li>基于fileIo模块实现清除缓存，通过检查获取上下文对象检测缓存，以及应用的缓存目录，存在缓存时可通过rmdirSync实现清除缓存的能力。</li>
+            <li>基于media模块中AVPlayer，通过调用外部的单词朗读接口，实现常考单词的语音朗读。同时可以使用官方内置textToSpeech模块实现ai文本转语音的方法实现朗读，具体通过创建转文本引擎，配置音色、音量、语种等参数，配置回调监听函数，定义转换函数，实现文本转语音播放。
+            </li>
+            <li>基于ConfigurationConstant模块下的ColorMode来获取当前的颜色模式，同时通过获取应用的上下文对象，调用setColorMode方法实现设置颜色模式。二者相互配合可以实现手动切换深色模式和跟随系统模式。
+            </li>
+            <li>基于 QRCode 组件快速生成二维码，用户通过截图将二维码保存，通过扫码即可便捷分享内容，提升文章传播效率与用户互动性。</li>
+            <li>基于photoAccessHelper模块，通过实例化对象，select选择图片， 拷贝选择的图片到应用沙箱，通过缓存路径+文件名 拼接出完整的路径，上传到服务器。实现上传头像功能。</li>
+            <li>基于原生Navigation，创建路由配置文件以及路由栈，子页面使用NavDestination包裹，构造页面函数从而实现路由的配置。</li>
+            <li>使用canIUse检查设备是否支持扫码功能，调用 scanBarcode.startScanForResult 启动扫码界面，根据扫码得到的 id 通过 get 请求获取试题详情。</li>
+            <li>基于SaveButton安全控件来实现对受限权限的短暂获取，通过设置相应的参数来实现获取对应的权限以及显示对应的文本。</li>
+        </ol><br>
+        <div class="job-title" style="font-size: 20px;">2024年4月~9月 | 鸿蒙系统应用开发项目 | 时光纪念日</div>
+        <div style="margin-top: 5px;"><b>技术栈：</b>Arkts、ArkUI、通知权限、SaveButton、axios、沉浸式布局、photoAccessHelper</div>
+        <div style="margin-top: 5px;">
+            <b>项目描述：</b>时光纪念日提供查看纪念日和节日信息黄历等服务以及记录纪念日功能的应用。
+        </div>
+        <div style="margin-top: 5px;">
+            <b>负责模块：</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;负责首页添加纪念日、生日、日常以及节日的页面功能实现，以及往事回忆页面的回忆代办卡片的增删改查。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“每日打卡”页面的日历组件、累计打卡、连续打卡信息的渲染，调用接口渲染今日黄历信息卡片。
+        </div>
+        <div class="job-title">项目技术要点：</div>
+        <ol>
+            <li>封装日志打印工具Logger和 Axios 网络请求工具类，配置基地址、请求拦截和响应拦截，以及网络请求方法。</li>
+            <li>通过封装notificationManager来实现通知权限，当事件的倒计时为0 的当天发送通知告知用户。</li>
+            <li>基于tab和list列表完成纪念日，生日，日常，节日的切换以及信息列表的展示</li>
+            <li>通过setWindowLayoutFullScreen来开启沉浸式并搭配getWindowAvoidArea获取导航栏的高度转成VP后持久化下来，实现应用的沉浸式配置。</li>
+            <li>调用接口获取今年节日信息，并使用lazyforEach来实现节日卡片的懒加载，配置第三个参数键值生成函数绑定id保证唯一性。</li>
+            <li>基于photoAccessHelper实现选取相册中的图片来添加回忆卡片的功能。</li>
+            <li>使用关系型数据库创建回忆卡片表来存储卡片的id、难忘日期、标题、难忘内容、图片的url等信息，并封装增删改查等操作方法，然后实例化导出。</li>
+            <li>基于HmCalendar第三方组件来实现显示日历效果，传入selectedDays属性今天的值实现当天选中打卡，onChangeMonth属性点击日期弹出当日信息。</li>
+            <li>用户首选项Preferences来保存账号登录的信息，通过检查token是否失效来实现是否登录过期。</li>
+            <li>利用ConfigurationConstant下的ColorMode
+                APi来实现是否跟随系统的深色模式，通过配置base/element/color浅色模式颜色资源文件以及dark/element/color深色模式颜色资源文件，来实现切换不同颜色模式系统颜色跟随变化的效果。
+            </li>
+        </ol><br>
+        <div class="job-title" style="font-size: 20px;">2023年10月~2024年3月 | 安卓项目 | 多看天气</div>
+        <div style="margin-top: 5px;"><b>技术栈：</b>Kotlin 、 Jetpack 、Room 、WorkManager 、MPAndroidChart</div>
+        <div style="margin-top: 5px;">
+            <b>项目描述：</b>多看天气是一款轻量级天气查询应用，提供实时天气、未来 7 天预报、空气质量指数和生活指数等信
+            息。支持位置定位和城市搜索。
+        </div>
+
+        <div class="job-title">项目技术要点：</div>
+        <ol>
+            <li>使用 Retrofit + Gson 设计与实现高效稳定的 RESTful API 集成层，成功接入和风天气 等第三方
+                服务，实时获取多维度气象数据，并对网络请求、数据解析进行 健壮性封装 以应对各种异常场景。</li>
+            <li>全面应用 ViewModel 和 LiveData 构建响应式数据流，有效管理天气数据的生命周期，确保屏幕旋
+                转等配置变更时数据的持久化和 UI 状态的一致性，提升应用稳定性与流畅度。</li>
+            <li>主导设计主界面与未来天气趋势视图，清晰展示温度、天气状况、湿度、风速等关键信息及 7 日预
+                报图表 。开发动态背景功能，根据实时天气状况（如晴、雨、雪等）智能加载匹配的背景图片，增
+                强视觉沉浸感和信息传达。</li>
+            <li>实现通知栏小部件 (Notification Widget) ，允许用户在不打开应用的情况下快速查看当前核心天
+                气信息，显著提升应用易用性和用户粘性。</li>
+            <li>封装通用图片加载工具类，简化图片加载流程，提高代码复用性和模块化程度。</li>
+            <li>利用Kotlin协程处理网络请求等耗时操作，避免阻塞主线程，提升应用响应速度，使代码结构更简洁，避免回调地狱。</li>
+            <li>使用Dagger Hilt进行依赖注入，管理应用中的依赖关系，降低组件之间的耦合度。</li>
+            <li>使用Room数据库进行本地数据存储，方便地操作SQLite数据库，存储用户设置、天气数据缓存等信息，提升应用离线使用体验。</li>
+            <li>通过Android SDK提供的Location API获取用户当前位置，以便提供基于地理位置的个性化天气信息，需要在AndroidManifest.xml中声明相关权限，并处理运行时权限请求。</li>
+        </ol><br>
+        <div class="job-title" style="font-size: 20px;">2023年4月~9月 | 安卓项目 | 今日事纪</div>
+        <div style="margin-top: 5px;"><b>技术栈：</b>Kotlin、XML
+            布局、ConstraintLayout、Adapter、RecyclerView、ViewPager2、Fragment、Intent</div>
+        <div style="margin-top: 5px;">
+            <b>项目描述：</b>这是一款轻量级任务管理应用，支持用户创建、编辑、分类和跟踪任务进度。应用核心功能包括：任
+            务 CRUD 操作、优先级划分（高 / 中 / 低）、截止日期提醒、任务分类（工作 /生活 / 学习）、完成
+            状态统计。整体设计简洁直观，专注于提升用户的任务管理效率，适合日常使用。
+        </div>
+
+        <div class="job-title">项目技术要点：</div>
+        <ol>
+            <li>通过 RecyclerView 和自定义 Adapter 实现任务列表的展示与动态更新。</li>
+            <li>使用 ViewPager2 结合 Fragment 实现左右滑动切换不同分类（工作 / 生活 / 学习）的任务界面。</li>
+            <li>利用 ConstraintLayout 构建响应式布局，适配不同屏幕尺寸。</li>
+            <li>通过 Intent 在不同 Activity 或 Fragment 之间传递任务数据，支持任务的创建、编辑和详情查看。</li>
+            <li>使用 SharedPreferences 存储用户设置及任务数据，完成轻量级本地数据持久化。</li>
+            <li>采用 Retrofit+OkHttp 的方式请求配件和订单 API，支持拦截器实现 Token 刷新与请求重试。</li>
+            <li>通过 AlarmManager 设置任务提醒时间，结合 BroadcastReceiver 接收系统广播并触发通知栏提醒。</li>
+            <li>采用 MVP 架构，利用 Model 、View 和 Presenter 分离关注点，使代码更清晰、更易于测试和维护。</li>
+            <li>通过NavigationGraph管理Fragment之间的跳转，实现页面之间的导航和切换。</li>
+            <li>利用DataBinding技术，将日记对象的属性如标题、内容和日期直接绑定到UI元素TextView，实现数据的双向绑定。</li>
+        </ol>
+        <div class="job-title" style="font-size: 20px;">2022年8月~2023年3月 | 安卓项目 | 起身运动</div>
+        <div style="margin-top: 5px;"><b>技术栈：</b>Kotlin、OkHttp、Toast、BottomNavigationView、ProgressDialog</div>
+        <div style="margin-top: 5px;">
+            <b>项目描述：</b>能够精准记录用户的运动数据，同时提供周期报告分享您的运动成果，内置训练课程让小白也可以慢慢变强。
+        </div>
+
+        <div class="job-title">项目技术要点：</div>
+        <ol>
+            <li>基于 OkHttp 网络工具库进行二次封装，统一配置请求和响应拦截，抽取 api 请求以及全局常量，方
+                便管理。</li>
+            <li>对 Toast 三方库进行二次封装，用于项目中各个地方的轻提示。</li>
+            <li>配置权限相关参数，解决移动端获取运动健康数据时的权限申请与管理问题。</li>
+            <li>、使用 BottomNavigationView 自定义底部导航组件，封装可复用的底部导航栏，支持父组件向子组件
+                传递属性和 UI 结构。</li>
+            <li>使用 SharedPreferences 存储用户设置及任务数据，完成轻量级本地数据持久化。</li>
+            <li>通过蓝牙连接BluetoothAdapter，来实现连接力量站等智能运动设备，实现对设备的管理和控制。</li>
+            <li>利用NotificationCompat来创建通知渠道，发送通知提醒用户起来活动。</li>
+            <li>ViewModel管理UI数据，避免屏幕旋转数据丢失，确保数据更新时UI同步。</li>
+            <li>通过SensorManager获取设备传感器数据，用于运动数据收集（如计步、动作识别）。</li>
+        </ol>
+
+    </div>
     </div>
 
     <div class="section">
@@ -180,13 +348,17 @@
         <div class="self-evaluation">
             <ul>
                 <li>我具有良好的创新精神</li>
-                <li>我具有踏实能干得奋斗精神</li>
+                <li>我具有踏实能干的奋斗精神</li>
                 <li>我具有爱国情怀</li>
-                <li>具有吃苦耐劳的品格，任劳任怨</li>
-                <li>有艺术涵养，有摄影调色等基础，思维灵活</li>
+                <li>具有吃苦耐劳的品格，任劳任怨，不怕加班</li>
             </ul>
         </div>
     </div>
+    <div class="section">
+        <h2 class="section-title">应用开发者高级认证</h2><br>
+        <img src="renzheng.jpg" alt="" style="width: 600px;">
+    </div>
 
 </body>
+
 </html>

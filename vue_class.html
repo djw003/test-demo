@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>v-bind操作class</title>
     <script src="js/vue.js"></script>
-    <style> 
-        .box{
+    <style>
+        .box {
             width: 200px;
             height: 200px;
             border: 3px solid black;
@@ -14,32 +15,55 @@
             margin-top: 10px;
             font-size: 30px;
         }
-        .pink{
+
+        .pink {
             background-color: pink;
         }
-        .big{
+
+        .big {
             width: 300px;
             height: 300px;
         }
-        .progress{
+
+        .progress {
+            position: relative;
+            /* 关键：为内部绝对定位元素提供参考 */
             width: 100%;
             height: 20px;
             background-color: #000000;
             border-radius: 50px;
+            font-size: 14px;
         }
-        .inner{
-            width: 50%;
+
+        .inner {
+            position: absolute;
+            /* 绝对定位，相对于 .progress */
+            top: 0;
+            left: 0;
             height: 20px;
+            width: 50%;
+            /* 当前进度百分比 */
             border-radius: 50px;
             background-color: #6ec8ff;
             border: 2px solid #000000;
+            box-sizing: border-box;
         }
-        span{
-            margin-left: auto;
-            margin-right: auto;
+
+        .progress span {
+            position: absolute;
+            /* 绝对定位 */
+            top: 0;
+            left: 50%;
+            /* 居中显示 */
+            transform: translateX(-50%);
+            /* 精准居中 */
+            color: white;
+            font-weight: bold;
+            white-space: nowrap;
         }
     </style>
 </head>
+
 <body>
     <div id="app">
         <div class="box" :class="{pink:true,big:true}">黑马程序员</div>
@@ -47,18 +71,20 @@
         <br>
         <div class="progress">
             <div class="inner">
+                <span>50%</span>
             </div>
         </div>
-        <span>50%</span>
+
     </div>
     <script>
         var app = new Vue({
-            el:"#app",
-            data:{
+            el: "#app",
+            data: {
 
             }
-        
+
         })
     </script>
 </body>
+
 </html>

@@ -3,10 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小黑记事本</title>
-    <script src="js/"></script>
+    <title>修饰符</title>
+    <script src="js/vue.js"></script>
 </head>
 <body>
-    
+    <div id="app"><!-- @keyup.enter表示按下回车键时触发，@keyup表示按下任意键时触发-->
+        <div><!-- v-model绑定输入框的值，v-model.number绑定输入框的值为数字类型 v-model.trim去除输入框前后空格-->
+            <!-- @click.stop阻止事件冒泡，@click.prevent阻止默认事件如a链接跳转，@click.self只触发当前元素的点击事件，@click.once只触发一次点击事件 -->
+        </div>
+        <!--
+        const numbers = [1, 2, 3, 4];
+
+        const sum = numbers.reduce((acc, curr) => {
+            return acc + curr;
+        }, 0);
+        
+        console.log(sum); // 输出: 10
+        
+        -->
+    </div>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+
+            }
+        })
+    </script>
 </body>
 </html>
